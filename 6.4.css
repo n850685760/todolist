@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+header{
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid #B1B1B1;
+}
+main{
+    width: 1200px;
+    margin: 0 auto;
+}
+main .daohang{
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+main .daohang >li{
+    text-align: center;
+    flex-grow: 1;
+    cursor: pointer
+}
+main .content > li{
+    line-height:40px;
+    box-sizing: border-box;
+    padding: 30px;
+    height: 40px;
+    border-bottom: 1px solid #B1B1B1;
+}
+main .content > li > p{
+    display: inline-block;
+}
+main .content > li > time{
+    float: right;
+}
+main .daohang >li.hot {
+    transition: all 0.5s;
+    color: white;
+}
+main .top{
+    top: 0;
+    left: 0;
+    transition: all 0.6s;
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    background-color: #4ebbfe;
+    z-index: -1;
+}
+main .daohang >li.hot:nth-child(1) ~ .top{
+    transform: translate(0,0);
+}
+main .daohang >li.hot:nth-child(2) ~ .top{
+    transform: translate(100%,0);
+}
+main .daohang >li.hot:nth-child(3) ~ .top{
+    transform: translate(200%,0);
+}
+.daohang div{
+    margin-left: 10px;
+    float: right;
+}
+.content div{
+    margin-left: 10px;
+    float: right;
+}
+textarea{
+    width: 200px;
+    height: 50px;
+    resize: none;
+}
+header div{
+    float: left;
+    text-align: center;
+}
