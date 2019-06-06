@@ -64,7 +64,6 @@ window.onload = function () {
                 }
                 this.classList.add('hot');
                 filter()
-                save()
             }
         }
         daohang[0].onclick()
@@ -82,7 +81,6 @@ window.onload = function () {
                 arr[index].status = true
             }
             filter()
-            save()
         }
     }
         //添加
@@ -102,18 +100,7 @@ window.onload = function () {
                 ar.status= false;
                 arr.push(ar)
                 filter()
-                save()
             }
 
     }
-        //存储
-    // let str = localStorage.getItem('arr')
-    // if (!str){
-    //     save()
-    //     str = localStorage.getItem('arr')
-    // }
-    //  arr = JSON.parse(str)
-    // function save() {
-    //     localStorage.getItem(JSON.stringify(arr))
-    // }
 }
