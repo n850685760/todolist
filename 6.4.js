@@ -1,6 +1,7 @@
 window.onload = function () {
     // let daohang = document.querySelectorAll('.daohang>li')
     let daohang = $('.daohang > li')
+    let type
     let content =document.querySelector('.content')
     let arr = [
         {
@@ -62,7 +63,7 @@ window.onload = function () {
     }
     //标题点击事件
     daohang.on('click',function () {
-        let type = $(this).attr('type')
+         type = $(this).attr('type')
             console.log(1);
         $(this).addClass('hot').siblings('li').removeClass('hot')
         filter(type)
@@ -85,7 +86,7 @@ window.onload = function () {
         if (e.target.nodeName == 'DIV'){
             arr.splice(index,1)
             localStorage.setItem('arr',JSON.stringify(arr))
-            filter()
+            filter(type)
         }
         if (e.target.nodeName == 'INPUT'){
             if (arr[index].status) {
@@ -95,7 +96,7 @@ window.onload = function () {
                 arr[index].status = true
                 localStorage.setItem('arr',JSON.stringify(arr))
             }
-            filter()
+            filter(type)
         }
     }
         //添加
