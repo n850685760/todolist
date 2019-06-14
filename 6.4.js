@@ -21,7 +21,7 @@ window.onload = function () {
     //渲染函数
     function x(arr) {
         let html = ``
-        arr.forEach(function (ele, index) {
+        arr.forEach(function (ele,index) {
             if (ele.status) {
                 html += `
             <li id="${ele.id}">
